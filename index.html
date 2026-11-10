@@ -3,7 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link Preview Metadata (WhatsApp, LinkedIn, Twitter) -->
     <title>Dinuri Wickramarathna | Software Engineering Portfolio</title>
+    <meta name="description" content="Portfolio of Dinuri Wickramarathna - Software Engineering Undergraduate at SLIIT specializing in Full-Stack Web, Mobile Applications, and Agentic AI solutions.">
+    
+    <!-- Open Graph / Social Share -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dinurisahanya-creator.github.io/">
+    <meta property="og:title" content="Dinuri Wickramarathna | Software Engineering Portfolio">
+    <meta property="og:description" content="Explore my projects including E-Waste Management System, Food Delivery App, ML models, and interactive software solutions.">
+    <meta property="og:image" content="Dinuri.jpeg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Dinuri Wickramarathna | Software Engineering Portfolio">
+    <meta property="twitter:description" content="Explore my projects including E-Waste Management System, Food Delivery App, ML models, and interactive software solutions.">
+    <meta property="twitter:image" content="Dinuri.jpeg">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -18,17 +35,17 @@
                 extend: {
                     colors: {
                         brand: {
-                            50: '#fef2f2',
-                            100: '#ffe1e1',
-                            500: '#ef4444',
-                            600: '#dc2626',
-                            700: '#b91c1c',
-                            800: '#991b1b',
-                            900: '#7f1d1d',
-                            dark: '#0a0a0c',
-                            card: '#121216',
-                            cardHover: '#181820',
-                            border: '#262630'
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                            dark: '#030712',
+                            card: '#0b1329',
+                            cardHover: '#111c38',
+                            border: '#1e293b'
                         }
                     },
                     fontFamily: {
@@ -47,44 +64,41 @@
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #0a0a0c;
+            background: #030712;
         }
         ::-webkit-scrollbar-thumb {
-            background: #991b1b;
+            background: #1d4ed8;
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #dc2626;
+            background: #2563eb;
         }
-        .glow-red {
-            box-shadow: 0 0 25px -5px rgba(220, 38, 38, 0.35);
-        }
-        .glow-red-lg {
-            box-shadow: 0 0 40px -5px rgba(220, 38, 38, 0.5);
+        .glow-blue {
+            box-shadow: 0 0 25px -5px rgba(37, 99, 235, 0.45);
         }
         .border-glow {
             transition: all 0.3s ease;
         }
         .border-glow:hover {
-            border-color: rgba(220, 38, 38, 0.8);
-            box-shadow: 0 0 20px rgba(220, 38, 38, 0.25);
+            border-color: rgba(59, 130, 246, 0.8);
+            box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
         }
     </style>
 </head>
 <body class="bg-brand-dark text-gray-200 font-sans antialiased selection:bg-brand-600 selection:text-white relative overflow-x-hidden">
 
     <!-- Toast Notification -->
-    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-brand-700 text-white px-5 py-3 rounded-xl shadow-xl flex items-center space-x-3 border border-red-500">
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-brand-700 text-white px-5 py-3 rounded-xl shadow-xl flex items-center space-x-3 border border-blue-400">
         <i class="fa-solid fa-circle-check text-white text-lg"></i>
         <span id="toast-msg" class="font-medium">Copied to clipboard!</span>
     </div>
 
-    <!-- Background Elements -->
-    <div class="fixed top-0 left-1/4 w-96 h-96 bg-brand-900/20 rounded-full blur-3xl pointer-events-none -z-10"></div>
-    <div class="fixed bottom-1/3 right-10 w-96 h-96 bg-brand-700/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+    <!-- Background Glow Elements -->
+    <div class="fixed top-0 left-1/4 w-96 h-96 bg-brand-900/30 rounded-full blur-3xl pointer-events-none -z-10"></div>
+    <div class="fixed bottom-1/3 right-10 w-96 h-96 bg-brand-700/20 rounded-full blur-3xl pointer-events-none -z-10"></div>
 
     <!-- Navigation Bar -->
-    <header class="sticky top-0 z-40 backdrop-blur-md bg-brand-dark/80 border-b border-brand-border">
+    <header class="sticky top-0 z-40 backdrop-blur-md bg-brand-dark/85 border-b border-brand-border">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <a href="#" class="font-heading font-extrabold text-2xl tracking-wider text-white flex items-center gap-2">
                 <span class="text-brand-500">&lt;</span>DINURI<span class="text-brand-500">/&gt;</span>
@@ -98,9 +112,14 @@
                 <a href="#contact" class="text-gray-300 hover:text-brand-500 transition-colors">Contact</a>
             </nav>
 
-            <a href="#contact" class="hidden sm:inline-flex items-center px-4 py-2 rounded-xl text-sm font-semibold bg-brand-700 hover:bg-brand-600 text-white transition-all duration-200 shadow-md hover:shadow-brand-600/50">
-                Get In Touch
-            </a>
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="CV.pdf" download class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold border border-brand-500/50 hover:border-brand-500 text-brand-500 hover:bg-brand-900/40 transition-all duration-200">
+                    <i class="fa-solid fa-file-arrow-down"></i> CV Download
+                </a>
+                <a href="#contact" class="inline-flex items-center px-4 py-2 rounded-xl text-sm font-semibold bg-brand-600 hover:bg-brand-500 text-white transition-all duration-200 shadow-md hover:shadow-brand-600/50 glow-blue">
+                    Get In Touch
+                </a>
+            </div>
 
             <!-- Mobile Menu Toggle Button -->
             <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white focus:outline-none">
@@ -115,6 +134,9 @@
             <a href="#projects" class="mobile-link block text-gray-300 hover:text-brand-500 py-2">Projects</a>
             <a href="#certifications" class="mobile-link block text-gray-300 hover:text-brand-500 py-2">Certifications</a>
             <a href="#contact" class="mobile-link block text-gray-300 hover:text-brand-500 py-2">Contact</a>
+            <a href="CV.pdf" download class="mobile-link inline-flex items-center justify-center gap-2 w-full py-2.5 mt-2 rounded-xl text-sm font-semibold border border-brand-500 text-brand-500 bg-brand-900/30">
+                <i class="fa-solid fa-file-arrow-down"></i> Download CV
+            </a>
         </div>
     </header>
 
@@ -130,7 +152,7 @@
                 </div>
                 
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-white tracking-tight leading-tight">
-                    Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-brand-500 to-red-700">Dinuri Wickramarathna</span>
+                    Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-brand-500 to-blue-600">Dinuri Wickramarathna</span>
                 </h1>
                 
                 <h2 class="text-xl sm:text-2xl font-medium text-gray-400">
@@ -138,34 +160,32 @@
                 </h2>
 
                 <p class="text-gray-300 leading-relaxed text-base sm:text-lg max-w-2xl mx-auto lg:mx-0">
-                    Motivated Software Engineering undergraduate with hands-on experience developing full-stack web & mobile applications, AI-powered systems (LangGraph), and machine learning solutions. Passionate about writing clean code, designing continuous integration workflows, and building scalable software products.
+                    Motivated Software Engineering undergraduate at the Sri Lanka Institute of Information Technology (SLIIT), with hands-on experience developing full-stack web and mobile applications, AI-powered systems, and machine learning solutions through academic projects[cite: 2]. Skilled in Java, C#, .NET, React, React Native, Flutter, Python, PostgreSQL, and MongoDB[cite: 2].
                 </p>
 
                 <!-- Location & Contact Badges -->
                 <div class="flex flex-wrap gap-3 justify-center lg:justify-start pt-2">
                     <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm bg-brand-card text-gray-300 border border-brand-border">
-                        <i class="fa-solid fa-location-dot text-brand-500"></i> Mawathagama, Kurunegala, Sri Lanka
+                        <i class="fa-solid fa-location-dot text-brand-500"></i> Mawathagama, Kurunegala, Sri Lanka[cite: 2]
                     </span>
                     <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm bg-brand-card text-gray-300 border border-brand-border">
-                        <i class="fa-solid fa-graduation-cap text-brand-500"></i> SLIIT (2024–2028)
+                        <i class="fa-solid fa-graduation-cap text-brand-500"></i> SLIIT (2024–2028)[cite: 2]
                     </span>
                 </div>
 
                 <!-- Action Buttons & Socials -->
                 <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                    <a href="#projects" class="w-full sm:w-auto px-6 py-3 rounded-xl font-semibold bg-brand-600 hover:bg-brand-500 text-white transition duration-200 shadow-lg glow-red text-center">
-                        View Projects <i class="fa-solid fa-arrow-down ml-2"></i>
-                    </a>
-                    <button onclick="copyToClipboard('dinuriwickramarathna@gmail.com', 'Email address copied!')" class="w-full sm:w-auto px-6 py-3 rounded-xl font-semibold bg-brand-card hover:bg-brand-cardHover text-gray-200 border border-brand-border hover:border-brand-600 transition duration-200 flex items-center justify-center gap-2">
+                    
+                    <button onclick="copyToClipboard('dinuriwickramarathna@gmail.com', 'Email address copied!')" class="w-full sm:w-auto px-6 py-3 rounded-xl font-semibold bg-brand-card hover:bg-brand-cardHover text-gray-200 border border-brand-border hover:border-brand-500 transition duration-200 flex items-center justify-center gap-2">
                         <i class="fa-regular fa-copy text-brand-500"></i> Copy Email
                     </button>
                     
                     <!-- Social Links -->
                     <div class="flex items-center space-x-3 pt-2 sm:pt-0">
-                        <a href="https://github.com/dinurisahanya-creator" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-xl bg-brand-card border border-brand-border flex items-center justify-center text-gray-300 hover:text-white hover:border-brand-500 hover:bg-brand-900/30 transition-all">
+                        <a href="https://github.com/dinurisahanya-creator" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-xl bg-brand-card border border-brand-border flex items-center justify-center text-gray-300 hover:text-white hover:border-brand-500 hover:bg-brand-900/40 transition-all" title="GitHub">
                             <i class="fa-brands fa-github text-lg"></i>
                         </a>
-                        <a href="https://linkedin.com/in/dinuri-wickramarathna-b34b063b4" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-xl bg-brand-card border border-brand-border flex items-center justify-center text-gray-300 hover:text-white hover:border-brand-500 hover:bg-brand-900/30 transition-all">
+                        <a href="https://linkedin.com/in/dinuri-wickramarathna-b34b063b4" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-xl bg-brand-card border border-brand-border flex items-center justify-center text-gray-300 hover:text-white hover:border-brand-500 hover:bg-brand-900/40 transition-all" title="LinkedIn">
                             <i class="fa-brands fa-linkedin-in text-lg"></i>
                         </a>
                     </div>
@@ -176,19 +196,19 @@
             <div class="lg:col-span-5 flex justify-center">
                 <div class="relative group max-w-xs sm:max-w-sm w-full">
                     <!-- Glow aura -->
-                    <div class="absolute -inset-1 bg-gradient-to-r from-red-600 to-brand-700 rounded-3xl blur-lg opacity-70 group-hover:opacity-100 transition duration-500"></div>
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-brand-700 rounded-3xl blur-lg opacity-70 group-hover:opacity-100 transition duration-500"></div>
                     
                     <!-- Profile Card Box -->
                     <div class="relative bg-brand-card rounded-2xl p-0 border border-brand-border overflow-hidden">
                         <img 
                             src="Dinuri.jpeg" 
                             alt="Dinuri Wickramarathna" 
-                            class="w-full h-auto rounded-2xl object-cover object-center shadow-xl grayscale-[20%] group-hover:grayscale-0 transition duration-500"
-                            onerror="this.onerror=null; this.src='https://placehold.co/400x500/121216/ef4444?text=Dinuri+W.';"
+                            class="w-full h-auto rounded-2xl object-cover object-center shadow-xl grayscale-[15%] group-hover:grayscale-0 transition duration-500"
+                            onerror="this.onerror=null; this.src='https://placehold.co/400x500/0b1329/3b82f6?text=Dinuri+W.';"
                         >
-                        <div class="mt-4 p-2 text-center">
+                        <div class="mt-4 p-3 text-center">
                             <p class="font-heading font-semibold text-lg text-white">Dinuri Wickramarathna</p>
-                            <p class="text-xs text-brand-500 font-medium tracking-wide uppercase">BSc (Hons) in IT Specializing in SE</p>
+                            <p class="text-xs text-brand-500 font-medium tracking-wide uppercase">BSc (Hons) in IT Specializing in SE[cite: 2]</p>
                         </div>
                     </div>
                 </div>
@@ -205,14 +225,14 @@
                 <h3 class="text-2xl sm:text-3xl font-heading font-bold text-white mb-6">Education & Qualification</h3>
                 
                 <div class="bg-brand-card p-6 sm:p-8 rounded-2xl border border-brand-border border-glow text-left flex flex-col sm:flex-row items-start gap-5">
-                    <div class="w-14 h-14 rounded-xl bg-brand-900/50 border border-brand-700/50 flex items-center justify-center shrink-0">
-                        <i class="fa-solid fa-graduation-cap text-2xl text-brand-500"></i>
+                    <div class="w-14 h-14 rounded-xl bg-brand-900/50 border border-brand-700/50 flex items-center justify-center shrink-0 text-brand-500">
+                        <i class="fa-solid fa-graduation-cap text-2xl"></i>
                     </div>
                     <div>
-                        <span class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-brand-900/40 text-brand-500 mb-2 border border-brand-700/40">2024 – 2028</span>
-                        <h4 class="text-xl font-bold text-white">BSc (Hons) in Information Technology</h4>
-                        <p class="text-brand-500 font-medium">Specializing in Software Engineering</p>
-                        <p class="text-gray-400 text-sm mt-1">Sri Lanka Institute of Information Technology (SLIIT)</p>
+                        <span class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-brand-900/40 text-brand-500 mb-2 border border-brand-700/40">2024 – 2028[cite: 2]</span>
+                        <h4 class="text-xl font-bold text-white">BSc (Hons) in Information Technology[cite: 2]</h4>
+                        <p class="text-brand-500 font-medium">Specializing in Software Engineering[cite: 2]</p>
+                        <p class="text-gray-400 text-sm mt-1">Sri Lanka Institute of Information Technology (SLIIT)[cite: 2]</p>
                     </div>
                 </div>
             </div>
@@ -232,104 +252,104 @@
             <!-- Programming Languages -->
             <div class="bg-brand-card p-6 rounded-2xl border border-brand-border border-glow">
                 <div class="flex items-center gap-3 mb-4">
-                    <div class="w-10 h-10 rounded-lg bg-red-950/60 flex items-center justify-center text-brand-500">
+                    <div class="w-10 h-10 rounded-lg bg-blue-950/60 flex items-center justify-center text-brand-500">
                         <i class="fa-solid fa-code text-xl"></i>
                     </div>
                     <h4 class="font-heading font-bold text-lg text-white">Programming Languages</h4>
                 </div>
                 <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">Java</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">Python</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">C#</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">C</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">JavaScript</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">TypeScript</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">Java[cite: 2]</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">Python[cite: 2]</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">C[cite: 2]</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">C#[cite: 2]</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">JavaScript[cite: 2]</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">TypeScript[cite: 2]</span>
                 </div>
             </div>
 
             <!-- Frameworks & Platforms -->
             <div class="bg-brand-card p-6 rounded-2xl border border-brand-border border-glow">
                 <div class="flex items-center gap-3 mb-4">
-                    <div class="w-10 h-10 rounded-lg bg-red-950/60 flex items-center justify-center text-brand-500">
+                    <div class="w-10 h-10 rounded-lg bg-blue-950/60 flex items-center justify-center text-brand-500">
                         <i class="fa-solid fa-cubes text-xl"></i>
                     </div>
                     <h4 class="font-heading font-bold text-lg text-white">Frameworks & Platforms</h4>
                 </div>
                 <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">.NET 8</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">ASP.NET Core Web API</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">React</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">React Native</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">Flutter</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">Vite</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">.NET[cite: 2]</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">ASP.NET Core Web API[cite: 2]</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">React[cite: 2]</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">React Native[cite: 2]</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">Flutter[cite: 2]</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">Vite[cite: 2]</span>
                 </div>
             </div>
 
             <!-- AI & Data Science -->
             <div class="bg-brand-card p-6 rounded-2xl border border-brand-border border-glow">
                 <div class="flex items-center gap-3 mb-4">
-                    <div class="w-10 h-10 rounded-lg bg-red-950/60 flex items-center justify-center text-brand-500">
+                    <div class="w-10 h-10 rounded-lg bg-blue-950/60 flex items-center justify-center text-brand-500">
                         <i class="fa-solid fa-brain text-xl"></i>
                     </div>
                     <h4 class="font-heading font-bold text-lg text-white">AI & Data Science</h4>
                 </div>
                 <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">Agentic AI</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">LangGraph</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">Machine Learning</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">Regression</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">Pandas</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">Scikit-learn</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">Agentic AI[cite: 2]</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">LangGraph[cite: 2]</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">Machine Learning[cite: 2]</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">Regression[cite: 2]</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">Pandas[cite: 2]</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">Scikit-learn[cite: 2]</span>
                 </div>
             </div>
 
             <!-- Databases -->
             <div class="bg-brand-card p-6 rounded-2xl border border-brand-border border-glow">
                 <div class="flex items-center gap-3 mb-4">
-                    <div class="w-10 h-10 rounded-lg bg-red-950/60 flex items-center justify-center text-brand-500">
+                    <div class="w-10 h-10 rounded-lg bg-blue-950/60 flex items-center justify-center text-brand-500">
                         <i class="fa-solid fa-database text-xl"></i>
                     </div>
                     <h4 class="font-heading font-bold text-lg text-white">Databases</h4>
                 </div>
                 <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">PostgreSQL</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">MongoDB</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">MySQL</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">SQL</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">PostgreSQL[cite: 2]</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">MongoDB[cite: 2]</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">MySQL[cite: 2]</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">SQL[cite: 2]</span>
                 </div>
             </div>
 
             <!-- DevOps & Tools -->
             <div class="bg-brand-card p-6 rounded-2xl border border-brand-border border-glow">
                 <div class="flex items-center gap-3 mb-4">
-                    <div class="w-10 h-10 rounded-lg bg-red-950/60 flex items-center justify-center text-brand-500">
+                    <div class="w-10 h-10 rounded-lg bg-blue-950/60 flex items-center justify-center text-brand-500">
                         <i class="fa-solid fa-gears text-xl"></i>
                     </div>
                     <h4 class="font-heading font-bold text-lg text-white">DevOps & Tools</h4>
                 </div>
                 <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">Git</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">GitHub</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">GitHub Actions (CI/CD)</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">VS Code</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">PyCharm</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">Google Colab</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">Git[cite: 2]</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">GitHub[cite: 2]</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">GitHub Actions (CI/CD)[cite: 2]</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">VS Code[cite: 2]</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">PyCharm[cite: 2]</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">Google Colab[cite: 2]</span>
                 </div>
             </div>
 
             <!-- Architecture & Concepts -->
             <div class="bg-brand-card p-6 rounded-2xl border border-brand-border border-glow">
                 <div class="flex items-center gap-3 mb-4">
-                    <div class="w-10 h-10 rounded-lg bg-red-950/60 flex items-center justify-center text-brand-500">
+                    <div class="w-10 h-10 rounded-lg bg-blue-950/60 flex items-center justify-center text-brand-500">
                         <i class="fa-solid fa-layer-group text-xl"></i>
                     </div>
                     <h4 class="font-heading font-bold text-lg text-white">Core Concepts</h4>
                 </div>
                 <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">OOP</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">Full-Stack Dev</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">Software Architecture</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">Database Design</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">Object-Oriented Programming (OOP)[cite: 2]</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">Full-Stack Development[cite: 2]</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">Software Architecture[cite: 2]</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-brand-dark text-gray-300 text-sm border border-brand-border">Database Design[cite: 2]</span>
                 </div>
             </div>
 
@@ -352,7 +372,7 @@
                         <input type="text" id="project-search" placeholder="Search project or tech..." class="bg-brand-card border border-brand-border rounded-xl pl-10 pr-4 py-2 text-sm text-white focus:outline-none focus:border-brand-500 w-full sm:w-64">
                     </div>
                     <div class="flex items-center gap-1 bg-brand-card border border-brand-border p-1 rounded-xl">
-                        <button class="filter-btn active px-3 py-1.5 text-xs font-medium rounded-lg text-white bg-brand-700" data-filter="all">All</button>
+                        <button class="filter-btn active px-3 py-1.5 text-xs font-medium rounded-lg text-white bg-brand-600" data-filter="all">All</button>
                         <button class="filter-btn px-3 py-1.5 text-xs font-medium rounded-lg text-gray-400 hover:text-white" data-filter="web">Web</button>
                         <button class="filter-btn px-3 py-1.5 text-xs font-medium rounded-lg text-gray-400 hover:text-white" data-filter="mobile">Mobile</button>
                         <button class="filter-btn px-3 py-1.5 text-xs font-medium rounded-lg text-gray-400 hover:text-white" data-filter="ai">AI / ML</button>
@@ -363,99 +383,141 @@
             <!-- Projects Grid -->
             <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
-                <!-- Project 1 -->
-                <div class="project-card bg-brand-card rounded-2xl border border-brand-border p-6 flex flex-col justify-between border-glow" data-category="web mobile ai" data-title="e-waste management system agentic ai langgraph net react flutter">
+                <!-- Project 1: E-Waste Management System -->
+                <div class="project-card bg-brand-card rounded-2xl border border-brand-border p-6 flex flex-col justify-between border-glow" data-category="web mobile ai" data-title="e-waste management system agentic ai langgraph net react flutter github actions">
                     <div>
                         <div class="flex items-center justify-between mb-4">
                             <span class="px-3 py-1 text-xs font-semibold rounded-full bg-brand-900/60 text-brand-500 border border-brand-700/50">Featured Full-Stack</span>
-                            <div class="flex gap-2 text-gray-400">
-                                <i class="fa-solid fa-diagram-project text-brand-500"></i>
+                            <div class="flex gap-3 text-gray-400">
+                                <a href="https://github.com/Nethmini-alt/E-waste-management-system.git" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors text-lg" title="View Source Code">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
                             </div>
                         </div>
-                        <h4 class="text-2xl font-heading font-bold text-white mb-3">E-Waste Management System</h4>
+                        <h4 class="text-2xl font-heading font-bold text-white mb-2">E-Waste Management System[cite: 2]</h4>
+                        
+                        <!-- Role Badge -->
+                        <div class="mb-4 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-blue-950/70 text-blue-300 border border-blue-800/60 text-xs font-medium">
+                            <i class="fa-solid fa-user-gear text-brand-500"></i> My Role: Generator Submission & Agentic AI Assessment Modules
+                        </div>
+
                         <p class="text-gray-300 text-sm leading-relaxed mb-6">
-                            Full-stack e-waste management platform with centralized ASP.NET Core Web API and PostgreSQL database supporting React web & Flutter mobile apps. Features Python-based agentic AI integrated via LangGraph for analysis, matching, and workflow automation. Includes automated GitHub Actions CI/CD workflows.
+                            Developed a full-stack e-waste management platform with a centralized ASP.NET Core Web API and PostgreSQL database, supporting React web and Flutter mobile applications[cite: 2]. Integrated a Python-based agentic AI service using LangGraph to support workflow tasks such as analysis, matching, validation, and planning[cite: 2]. Configured GitHub Actions workflows to automate CI/CD tasks[cite: 2].
                         </p>
                     </div>
                     <div>
-                        <div class="flex flex-wrap gap-2 pt-4 border-t border-brand-border/60">
-                            <span class="text-xs px-2.5 py-1 rounded bg-brand-dark text-red-400 font-medium">.NET 8 API</span>
-                            <span class="text-xs px-2.5 py-1 rounded bg-brand-dark text-red-400 font-medium">React</span>
-                            <span class="text-xs px-2.5 py-1 rounded bg-brand-dark text-red-400 font-medium">Flutter</span>
-                            <span class="text-xs px-2.5 py-1 rounded bg-brand-dark text-red-400 font-medium">PostgreSQL</span>
-                            <span class="text-xs px-2.5 py-1 rounded bg-brand-dark text-red-400 font-medium">LangGraph AI</span>
-                            <span class="text-xs px-2.5 py-1 rounded bg-brand-dark text-red-400 font-medium">GitHub Actions</span>
+                        <div class="flex flex-wrap gap-2 pt-4 border-t border-brand-border/60 mb-4">
+                            <span class="text-xs px-2.5 py-1 rounded bg-brand-dark text-blue-400 font-medium">.NET 8 API[cite: 2]</span>
+                            <span class="text-xs px-2.5 py-1 rounded bg-brand-dark text-blue-400 font-medium">React[cite: 2]</span>
+                            <span class="text-xs px-2.5 py-1 rounded bg-brand-dark text-blue-400 font-medium">Flutter[cite: 2]</span>
+                            <span class="text-xs px-2.5 py-1 rounded bg-brand-dark text-blue-400 font-medium">PostgreSQL[cite: 2]</span>
+                            <span class="text-xs px-2.5 py-1 rounded bg-brand-dark text-blue-400 font-medium">LangGraph AI[cite: 2]</span>
+                            <span class="text-xs px-2.5 py-1 rounded bg-brand-dark text-blue-400 font-medium">GitHub Actions[cite: 2]</span>
                         </div>
+                        <a href="https://github.com/Nethmini-alt/E-waste-management-system.git" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-brand-500 hover:text-blue-300 font-semibold transition-colors">
+                            View Repository <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
+                <!-- Project 2: Online Food Delivery Mobile App -->
                 <div class="project-card bg-brand-card rounded-2xl border border-brand-border p-6 flex flex-col justify-between border-glow" data-category="mobile" data-title="online food delivery mobile app react native typescript mongodb">
                     <div>
                         <div class="flex items-center justify-between mb-4">
                             <span class="px-3 py-1 text-xs font-semibold rounded-full bg-brand-900/60 text-brand-500 border border-brand-700/50">Mobile App</span>
-                            <div class="flex gap-2 text-gray-400">
-                                <i class="fa-solid fa-mobile-screen text-brand-500"></i>
+                            <div class="flex gap-3 text-gray-400">
+                                <a href="https://github.com/HarithaGeemal/Wmt_project.git" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors text-lg" title="View Source Code">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
                             </div>
                         </div>
-                        <h4 class="text-2xl font-heading font-bold text-white mb-3">Online Food Delivery Mobile App</h4>
+                        <h4 class="text-2xl font-heading font-bold text-white mb-2">Online Food Delivery Mobile App[cite: 2]</h4>
+
+                        <!-- Role Badge -->
+                        <div class="mb-4 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-blue-950/70 text-blue-300 border border-blue-800/60 text-xs font-medium">
+                            <i class="fa-solid fa-user-gear text-brand-500"></i> My Role: Type-Safe UI Components & Order Processing
+                        </div>
+
                         <p class="text-gray-300 text-sm leading-relaxed mb-6">
-                            Cross-platform mobile app designed for online food ordering and delivery. Engineered using React Native with TypeScript (TSX) to build reusable, type-safe UI components. Integrated with MongoDB to efficiently store and manage user orders and menu items.
+                            Developed a cross-platform mobile application for online food ordering and delivery using React Native and TypeScript[cite: 2]. Built reusable, type-safe UI components to improve code consistency, readability, and maintainability[cite: 2]. Integrated MongoDB to store and manage application data[cite: 2].
                         </p>
                     </div>
                     <div>
-                        <div class="flex flex-wrap gap-2 pt-4 border-t border-brand-border/60">
-                            <span class="text-xs px-2.5 py-1 rounded bg-brand-dark text-red-400 font-medium">React Native</span>
-                            <span class="text-xs px-2.5 py-1 rounded bg-brand-dark text-red-400 font-medium">TypeScript</span>
-                            <span class="text-xs px-2.5 py-1 rounded bg-brand-dark text-red-400 font-medium">MongoDB</span>
+                        <div class="flex flex-wrap gap-2 pt-4 border-t border-brand-border/60 mb-4">
+                            <span class="text-xs px-2.5 py-1 rounded bg-brand-dark text-blue-400 font-medium">React Native[cite: 2]</span>
+                            <span class="text-xs px-2.5 py-1 rounded bg-brand-dark text-blue-400 font-medium">TypeScript[cite: 2]</span>
+                            <span class="text-xs px-2.5 py-1 rounded bg-brand-dark text-blue-400 font-medium">MongoDB[cite: 2]</span>
                         </div>
+                        <a href="https://github.com/HarithaGeemal/Wmt_project.git" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-brand-500 hover:text-blue-300 font-semibold transition-colors">
+                            View Repository <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Project 3 -->
-                <div class="project-card bg-brand-card rounded-2xl border border-brand-border p-6 flex flex-col justify-between border-glow" data-category="ai" data-title="ai-driven residential property valuation ml model python scikit-learn pandas">
+                <!-- Project 3: Property Valuation ML Model -->
+                <div class="project-card bg-brand-card rounded-2xl border border-brand-border p-6 flex flex-col justify-between border-glow" data-category="ai" data-title="ai-driven residential property valuation ml model python scikit-learn pandas r2 r-squared rmse">
                     <div>
                         <div class="flex items-center justify-between mb-4">
                             <span class="px-3 py-1 text-xs font-semibold rounded-full bg-brand-900/60 text-brand-500 border border-brand-700/50">Machine Learning</span>
-                            <div class="flex gap-2 text-gray-400">
-                                <i class="fa-solid fa-chart-line text-brand-500"></i>
+                            <div class="flex gap-3 text-gray-400">
+                                <i class="fa-solid fa-chart-line text-brand-500 text-lg"></i>
                             </div>
                         </div>
-                        <h4 class="text-2xl font-heading font-bold text-white mb-3">Residential Property Valuation ML Model</h4>
+                        <h4 class="text-2xl font-heading font-bold text-white mb-2">Residential Property Valuation ML Model[cite: 2]</h4>
+
+                        <!-- Metric Badge -->
+                        <div class="mb-4 inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-950/70 text-emerald-300 border border-emerald-800/60 text-xs font-semibold">
+                            <i class="fa-solid fa-square-poll-vertical text-emerald-400"></i> Best Model: Random Forest Regressor (R² = 0.89, Low RMSE)
+                        </div>
+
                         <p class="text-gray-300 text-sm leading-relaxed mb-6">
-                            Machine learning workflow predicting residential property values based on historical real-estate data. Included extensive data cleaning, transformation, feature importance analysis, and training/comparing multiple regression models to optimize prediction accuracy.
+                            Developed a machine-learning workflow to estimate residential property values using historical real-estate data[cite: 2]. Performed data preprocessing, cleaning, transformation, and feature importance analysis[cite: 2]. Trained and compared multiple regression models to optimize accuracy[cite: 2].
                         </p>
                     </div>
                     <div>
-                        <div class="flex flex-wrap gap-2 pt-4 border-t border-brand-border/60">
-                            <span class="text-xs px-2.5 py-1 rounded bg-brand-dark text-red-400 font-medium">Python</span>
-                            <span class="text-xs px-2.5 py-1 rounded bg-brand-dark text-red-400 font-medium">Scikit-learn</span>
-                            <span class="text-xs px-2.5 py-1 rounded bg-brand-dark text-red-400 font-medium">Pandas</span>
-                            <span class="text-xs px-2.5 py-1 rounded bg-brand-dark text-red-400 font-medium">Google Colab</span>
+                        <div class="flex flex-wrap gap-2 pt-4 border-t border-brand-border/60 mb-4">
+                            <span class="text-xs px-2.5 py-1 rounded bg-brand-dark text-blue-400 font-medium">Python[cite: 2]</span>
+                            <span class="text-xs px-2.5 py-1 rounded bg-brand-dark text-blue-400 font-medium">Scikit-learn[cite: 2]</span>
+                            <span class="text-xs px-2.5 py-1 rounded bg-brand-dark text-blue-400 font-medium">Pandas[cite: 2]</span>
+                            <span class="text-xs px-2.5 py-1 rounded bg-brand-dark text-blue-400 font-medium">Google Colab[cite: 2]</span>
                         </div>
+                        <span class="inline-flex items-center gap-1.5 text-xs text-gray-400">
+                            <i class="fa-solid fa-flask text-brand-500"></i> Evaluated R², MAE & RMSE metrics
+                        </span>
                     </div>
                 </div>
 
-                <!-- Project 4 -->
+                <!-- Project 4: Smart Construction Tracking System -->
                 <div class="project-card bg-brand-card rounded-2xl border border-brand-border p-6 flex flex-col justify-between border-glow" data-category="web" data-title="smart construction tracking system html css javascript java">
                     <div>
                         <div class="flex items-center justify-between mb-4">
                             <span class="px-3 py-1 text-xs font-semibold rounded-full bg-brand-900/60 text-brand-500 border border-brand-700/50">Web Application</span>
-                            <div class="flex gap-2 text-gray-400">
-                                <i class="fa-solid fa-list-check text-brand-500"></i>
+                            <div class="flex gap-3 text-gray-400">
+                                <a href="https://github.com/HarithaGeemal/ITP_Project.git" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors text-lg" title="View Source Code">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
                             </div>
                         </div>
-                        <h4 class="text-2xl font-heading font-bold text-white mb-3">Smart Construction Tracking System</h4>
+                        <h4 class="text-2xl font-heading font-bold text-white mb-2">Smart Construction Tracking System[cite: 3]</h4>
+
+                        <!-- Role Badge -->
+                        <div class="mb-4 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-blue-950/70 text-blue-300 border border-blue-800/60 text-xs font-medium">
+                            <i class="fa-solid fa-user-gear text-brand-500"></i> My Role: Worker Allocation & Progress Dashboard Module
+                        </div>
+
                         <p class="text-gray-300 text-sm leading-relaxed mb-6">
-                            Web-based platform developed to track construction project milestones, manage resource allocation, and display real-time interactive progress dashboards. Built using Java for core app logic along with dynamic HTML/CSS/JS web frontends.
+                            Developed a web-based construction tracking system to monitor project milestones and resource allocation[cite: 3]. Created interactive dashboards to visualize construction progress, and implemented digital logging to improve visibility and traceability of project updates[cite: 3].
                         </p>
                     </div>
                     <div>
-                        <div class="flex flex-wrap gap-2 pt-4 border-t border-brand-border/60">
-                            <span class="text-xs px-2.5 py-1 rounded bg-brand-dark text-red-400 font-medium">Java</span>
-                            <span class="text-xs px-2.5 py-1 rounded bg-brand-dark text-red-400 font-medium">JavaScript</span>
-                            <span class="text-xs px-2.5 py-1 rounded bg-brand-dark text-red-400 font-medium">HTML/CSS</span>
+                        <div class="flex flex-wrap gap-2 pt-4 border-t border-brand-border/60 mb-4">
+                            <span class="text-xs px-2.5 py-1 rounded bg-brand-dark text-blue-400 font-medium">Java[cite: 3]</span>
+                            <span class="text-xs px-2.5 py-1 rounded bg-brand-dark text-blue-400 font-medium">JavaScript[cite: 3]</span>
+                            <span class="text-xs px-2.5 py-1 rounded bg-brand-dark text-blue-400 font-medium">HTML/CSS[cite: 3]</span>
                         </div>
+                        <a href="https://github.com/HarithaGeemal/ITP_Project.git" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-brand-500 hover:text-blue-300 font-semibold transition-colors">
+                            View Repository <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </a>
                     </div>
                 </div>
 
@@ -463,199 +525,184 @@
         </div>
     </section>
 
-    <!-- Certifications & Soft Skills Section -->
+    <!-- Certifications & Training Section -->
     <section id="certifications" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            
-            <!-- Certifications Column -->
-            <div>
-                <div class="flex items-center gap-3 mb-8">
-                    <div class="w-10 h-10 rounded-xl bg-brand-900/60 border border-brand-700/50 flex items-center justify-center text-brand-500">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+            <h2 class="text-xs font-semibold uppercase tracking-widest text-brand-500 mb-2">Professional Growth</h2>
+            <h3 class="text-3xl sm:text-4xl font-heading font-bold text-white">Certifications & Training</h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <!-- HackerRank Certification -->
+            <div class="bg-brand-card p-6 rounded-2xl border border-brand-border border-glow flex flex-col justify-between">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-blue-950/70 flex items-center justify-center text-brand-500 shrink-0">
+                        <i class="fa-solid fa-award text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs text-brand-500 font-medium">Earned 03 Jun 2026[cite: 3]</span>
+                        <h4 class="text-lg font-bold text-white mt-0.5">Frontend Developer (React): HackerRank Role Certification[cite: 3]</h4>
+                        <p class="text-gray-400 text-sm mt-1">HackerRank Certification Platform[cite: 3]</p>
+                    </div>
+                </div>
+                <div class="mt-6 pt-4 border-t border-brand-border/60 flex items-center justify-between">
+                    <span class="text-xs text-emerald-400 flex items-center gap-1 font-medium">
+                        <i class="fa-solid fa-circle-check"></i> Verified Online
+                    </span>
+                    <a href="https://www.hackerrank.com/certificates/1bea787ea3fc" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-brand-500 hover:text-blue-300 font-semibold transition-colors">
+                        Verify Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- University of Moratuwa Course -->
+            <div class="bg-brand-card p-6 rounded-2xl border border-brand-border border-glow flex flex-col justify-between">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-blue-950/70 flex items-center justify-center text-brand-500 shrink-0">
                         <i class="fa-solid fa-certificate text-xl"></i>
                     </div>
-                    <h3 class="text-2xl font-heading font-bold text-white">Certifications</h3>
+                    <div>
+                        <span class="text-xs text-brand-500 font-medium">Professional Training</span>
+                        <h4 class="text-lg font-bold text-white mt-0.5">Server-side Web Programming[cite: 3]</h4>
+                        <p class="text-gray-400 text-sm mt-1">Centre for Open & Distance Learning (CODL), University of Moratuwa[cite: 3]</p>
+                    </div>
                 </div>
-
-                <div class="space-y-4">
-                    <div class="bg-brand-card p-5 rounded-xl border border-brand-border border-glow flex items-start gap-4">
-                        <i class="fa-solid fa-award text-2xl text-brand-500 mt-1"></i>
-                        <div>
-                            <h4 class="font-bold text-white">Frontend Developer (React)</h4>
-                            <p class="text-sm text-gray-400">HackerRank Role Certification</p>
-                            <span class="inline-block mt-2 text-xs font-semibold text-brand-500">Earned 03 Jun 2026</span>
-                        </div>
-                    </div>
-
-                    <div class="bg-brand-card p-5 rounded-xl border border-brand-border border-glow flex items-start gap-4">
-                        <i class="fa-solid fa-laptop-code text-2xl text-brand-500 mt-1"></i>
-                        <div>
-                            <h4 class="font-bold text-white">Server-side Web Programming</h4>
-                            <p class="text-sm text-gray-400">Centre for Open & Distance Learning (CODL)</p>
-                            <span class="inline-block mt-2 text-xs font-semibold text-brand-500">University of Moratuwa</span>
-                        </div>
-                    </div>
+                <div class="mt-6 pt-4 border-t border-brand-border/60">
+                    <span class="text-xs text-gray-400">Advanced server-side architecture and backend service development.</span>
                 </div>
             </div>
-
-            <!-- Soft Skills Column -->
-            <div>
-                <div class="flex items-center gap-3 mb-8">
-                    <div class="w-10 h-10 rounded-xl bg-brand-900/60 border border-brand-700/50 flex items-center justify-center text-brand-500">
-                        <i class="fa-solid fa-user-check text-xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-heading font-bold text-white">Soft Skills</h3>
-                </div>
-
-                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                    <div class="bg-brand-card p-4 rounded-xl border border-brand-border text-center hover:border-brand-600 transition">
-                        <i class="fa-solid fa-puzzle-piece text-brand-500 mb-2 text-xl block"></i>
-                        <span class="text-sm text-gray-200 font-medium">Problem Solving</span>
-                    </div>
-                    <div class="bg-brand-card p-4 rounded-xl border border-brand-border text-center hover:border-brand-600 transition">
-                        <i class="fa-solid fa-chart-pie text-brand-500 mb-2 text-xl block"></i>
-                        <span class="text-sm text-gray-200 font-medium">Analytical Thinking</span>
-                    </div>
-                    <div class="bg-brand-card p-4 rounded-xl border border-brand-border text-center hover:border-brand-600 transition">
-                        <i class="fa-solid fa-users text-brand-500 mb-2 text-xl block"></i>
-                        <span class="text-sm text-gray-200 font-medium">Team Collaboration</span>
-                    </div>
-                    <div class="bg-brand-card p-4 rounded-xl border border-brand-border text-center hover:border-brand-600 transition">
-                        <i class="fa-solid fa-clock text-brand-500 mb-2 text-xl block"></i>
-                        <span class="text-sm text-gray-200 font-medium">Time Management</span>
-                    </div>
-                    <div class="bg-brand-card p-4 rounded-xl border border-brand-border text-center hover:border-brand-600 transition">
-                        <i class="fa-solid fa-comments text-brand-500 mb-2 text-xl block"></i>
-                        <span class="text-sm text-gray-200 font-medium">Communication</span>
-                    </div>
-                    <div class="bg-brand-card p-4 rounded-xl border border-brand-border text-center hover:border-brand-600 transition">
-                        <i class="fa-solid fa-arrows-rotate text-brand-500 mb-2 text-xl block"></i>
-                        <span class="text-sm text-gray-200 font-medium">Adaptability</span>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
-    
-    <!-- Contact & Footer Section -->
-    <footer id="contact" class="py-16 bg-brand-dark border-t border-brand-border relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            
-            <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">Let's Connect & Work Together</h2>
-            <p class="text-gray-400 max-w-xl mx-auto mb-8">
-                I am actively seeking software engineering internship opportunities. Feel free to reach out for project collaborations or inquiries.
+    <!-- Soft Skills & References Section -->
+    <section class="py-12 bg-brand-card/40 border-y border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Soft Skills -->
+                <div>
+                    <h3 class="text-xs font-semibold uppercase tracking-widest text-brand-500 mb-2">Interpersonal Strengths</h3>
+                    <h4 class="text-2xl font-heading font-bold text-white mb-4">Soft Skills</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-lg bg-brand-card text-gray-300 text-sm border border-brand-border">Problem Solving[cite: 3]</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-brand-card text-gray-300 text-sm border border-brand-border">Analytical Thinking[cite: 3]</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-brand-card text-gray-300 text-sm border border-brand-border">Team Collaboration[cite: 3]</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-brand-card text-gray-300 text-sm border border-brand-border">Time Management[cite: 3]</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-brand-card text-gray-300 text-sm border border-brand-border">Communication[cite: 3]</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-brand-card text-gray-300 text-sm border border-brand-border">Adaptability[cite: 3]</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-brand-card text-gray-300 text-sm border border-brand-border">Critical Thinking[cite: 3]</span>
+                    </div>
+                </div>
+
+               
+             
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-brand-card/30 border-t border-brand-border">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-xs font-semibold uppercase tracking-widest text-brand-500 mb-2">Get In Touch</h2>
+            <h3 class="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">Let's Build Something Together</h3>
+            <p class="text-gray-300 max-w-xl mx-auto mb-10">
+                I am currently looking for software engineering internship opportunities. Feel free to reach out via email, download my CV, or connect with me on LinkedIn!
             </p>
 
-            <div class="flex flex-wrap justify-center gap-4 mb-12">
-                <a href="mailto:dinuriwickramarathna@gmail.com" class="px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-medium flex items-center gap-2 shadow-lg glow-red transition">
-                    <i class="fa-solid fa-envelope"></i> Send Email
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="mailto:dinuriwickramarathna@gmail.com" class="w-full sm:w-auto px-8 py-3.5 rounded-xl font-semibold bg-brand-600 hover:bg-brand-500 text-white transition duration-200 shadow-lg glow-blue flex items-center justify-center gap-2">
+                    <i class="fa-regular fa-envelope"></i> dinuriwickramarathna@gmail.com
                 </a>
-                <a href="tel:+94776010848" class="px-6 py-3 rounded-xl bg-brand-card hover:bg-brand-cardHover border border-brand-border text-gray-200 font-medium flex items-center gap-2 transition">
-                    <i class="fa-solid fa-phone text-brand-500"></i> +94 77 601 0848
-                </a>
-            </div>
-
-            <!-- Social Links -->
-            <div class="flex justify-center space-x-4 mb-8">
-                <a href="https://github.com/dinurisahanya-creator" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-brand-card border border-brand-border flex items-center justify-center text-gray-300 hover:text-brand-500 hover:border-brand-500 transition">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-                <a href="https://linkedin.com/in/dinuri-wickramarathna-b34b063b4" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-brand-card border border-brand-border flex items-center justify-center text-gray-300 hover:text-brand-500 hover:border-brand-500 transition">
-                    <i class="fa-brands fa-linkedin-in"></i>
+                <a href="tel:+94776010848" class="w-full sm:w-auto px-8 py-3.5 rounded-xl font-semibold bg-brand-600 hover:bg-brand-500 text-white transition duration-200 shadow-lg glow-blue flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone"></i> +94 77 601 0848
                 </a>
             </div>
+        </div>
+    </section>
 
-            <p class="text-xs text-gray-500">
-                &copy; <span id="year"></span> Dinuri Wickramarathna. All rights reserved.
-            </p>
+    <!-- Footer -->
+    <footer class="py-8 bg-brand-dark border-t border-brand-border text-center text-sm text-gray-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>&copy; 2026 Dinuri Wickramarathna. All rights reserved.</p>
+            <div class="flex space-x-6">
+                <a href="https://github.com/dinurisahanya-creator" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">GitHub</a>
+                <a href="https://linkedin.com/in/dinuri-wickramarathna-b34b063b4" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">LinkedIn</a>
+                <a href="https://www.hackerrank.com/certificates/1bea787ea3fc" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">HackerRank</a>
+            </div>
         </div>
     </footer>
 
     <!-- JavaScript Interactivity -->
     <script>
-        // Set dynamic copyright year
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        // Copy to Clipboard Utility
-        function copyToClipboard(text, customMessage) {
-            const tempInput = document.createElement("input");
-            tempInput.value = text;
-            document.body.appendChild(tempInput);
-            tempInput.select();
-            document.execCommand("copy");
-            document.body.removeChild(tempInput);
-
-            showToast(customMessage || "Copied to clipboard!");
-        }
-
-        // Custom Toast Notification Function
-        function showToast(message) {
-            const toast = document.getElementById('toast');
-            const toastMsg = document.getElementById('toast-msg');
-            toastMsg.textContent = message;
-            
-            toast.classList.remove('translate-y-20', 'opacity-0');
-            toast.classList.add('translate-y-0', 'opacity-100');
-
-            setTimeout(() => {
-                toast.classList.remove('translate-y-0', 'opacity-100');
-                toast.classList.add('translate-y-20', 'opacity-0');
-            }, 3000);
-        }
-
-        // Mobile Menu Toggle
-        const mobileBtn = document.getElementById('mobile-menu-btn');
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        mobileBtn.addEventListener('click', () => {
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
 
-        document.querySelectorAll('.mobile-link').forEach(link => {
+        mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });
         });
 
-        // Project Filter & Search Logic
+        // Copy to clipboard toast helper
+        function copyToClipboard(text, message) {
+            navigator.clipboard.writeText(text).then(() => {
+                const toast = document.getElementById('toast');
+                const toastMsg = document.getElementById('toast-msg');
+                toastMsg.textContent = message;
+                toast.classList.remove('translate-y-20', 'opacity-0');
+                setTimeout(() => {
+                    toast.classList.add('translate-y-20', 'opacity-0');
+                }, 3000);
+            });
+        }
+
+        // Project Filtering & Search Logic
         const filterBtns = document.querySelectorAll('.filter-btn');
         const projectCards = document.querySelectorAll('.project-card');
         const searchInput = document.getElementById('project-search');
 
-        let activeCategory = 'all';
-        let searchQuery = '';
+        let currentCategory = 'all';
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-brand-600', 'text-white');
+                    b.classList.add('text-gray-400');
+                });
+                btn.classList.add('active', 'bg-brand-600', 'text-white');
+                btn.classList.remove('text-gray-400');
+
+                currentCategory = btn.getAttribute('data-filter');
+                filterProjects();
+            });
+        });
+
+        searchInput.addEventListener('input', () => {
+            filterProjects();
+        });
 
         function filterProjects() {
-            projectCards.forEach(card => {
-                const categoryMatch = activeCategory === 'all' || card.dataset.category.includes(activeCategory);
-                const titleMatch = card.dataset.title.toLowerCase().includes(searchQuery.toLowerCase());
+            const query = searchInput.value.toLowerCase().trim();
 
-                if (categoryMatch && titleMatch) {
+            projectCards.forEach(card => {
+                const categories = card.getAttribute('data-category');
+                const titleText = card.getAttribute('data-title');
+                
+                const matchesCategory = currentCategory === 'all' || categories.includes(currentCategory);
+                const matchesSearch = !query || titleText.includes(query) || card.textContent.toLowerCase().includes(query);
+
+                if (matchesCategory && matchesSearch) {
                     card.style.display = 'flex';
                 } else {
                     card.style.display = 'none';
                 }
             });
         }
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(b => {
-                    b.classList.remove('active', 'bg-brand-700', 'text-white');
-                    b.classList.add('text-gray-400');
-                });
-                btn.classList.add('active', 'bg-brand-700', 'text-white');
-                btn.classList.remove('text-gray-400');
-
-                activeCategory = btn.dataset.filter;
-                filterProjects();
-            });
-        });
-
-        searchInput.addEventListener('input', (e) => {
-            searchQuery = e.target.value;
-            filterProjects();
-        });
     </script>
 </body>
 </html>
